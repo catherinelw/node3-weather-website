@@ -11,7 +11,7 @@ const forecast =(lat, long, cb)=>{
       cb('unable to search location',undefined)
     }
     else{
-      cb(undefined,response.body.current.temperature+response.body.location.country)
+      cb(undefined,`It is currently ${response.body.current.temperature} degrees, in the country of ${response.body.location.country} and the humidity is ${response.body.current.humidity}.`)
     }
   } )
 
